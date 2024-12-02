@@ -1,4 +1,4 @@
-# Ejercicio de Recruiting: Análisis Básico de Genotipado
+# Análisis Básico de Genotipado
 
 ## Descripción del Ejercicio
 
