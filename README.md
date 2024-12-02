@@ -6,7 +6,7 @@ En este ejercicio, trabajarás con archivos de genotipado en formato CSV para ca
 
 ## Archivos Proporcionados
 
-En la carpeta `input`, encontrarás varios archivos de genotipado (`.csv`) para que pruebes tu solución. Todos los archivos tienen el siguiente formato:
+En la carpeta `input`, encontrarás varios archivos de genotipado (`.txt`) para que pruebes tu solución. Todos los archivos tienen el siguiente formato:
 
 | RSID         | CHR  | POSITION   | GENOTYPE |
 |--------------|------|------------|----------|
@@ -14,6 +14,8 @@ En la carpeta `input`, encontrarás varios archivos de genotipado (`.csv`) para 
 | rs456        | 2    | 789012     | AG       |
 | rs789        | 1    | 234567     | --       |
 | ...          | ...  | ...        | ...      |
+
+El inicio del archivo contiene unas cabeceras que deben omitirse.
 
 ### Definición de Columnas:
 - **RSID**: Identificador único de una variante genética.
@@ -28,14 +30,13 @@ En la carpeta `input`, encontrarás varios archivos de genotipado (`.csv`) para 
 
 2. **Cálculo del Call Rate:**  
    - El **Call Rate** mide la proporción de variantes con un genotipo válido (distinto de `--`).  
-     Fórmula:  
-     \[
-     Call\ Rate = \frac{\text{Número de variantes con genotipo válido}}{\text{Número total de variantes}} \times 100
-     \]
+     Fórmula:   Número de variantes con genotipo válido / Número total de variantes
+     (Cada fila es una variante, recuerda que si tiene un guión '-' o '--' no es válido)
+    
    - Imprime el resultado en un formato legible (por ejemplo: `Call Rate: 98.5%`).
 
 3. **Distribución de Variantes por Cromosoma:**  
-   - Cuenta cuántas variantes hay para cada valor de `CHR`.
+   - Cuenta cuántas variantes válidas hay para cada valor de `CHR`.
    - Imprime el resultado como una lista o tabla simple. Ejemplo:  
      ```
      Variantes por cromosoma:
@@ -74,7 +75,7 @@ En la carpeta `input`, encontrarás varios archivos de genotipado (`.csv`) para 
 
 - **Call Rate correcto:** El cálculo debe ser preciso.
 - **Distribución por cromosoma correcta:** Los valores deben reflejar los datos proporcionados.
-- **Uso del repositorio de GitHub:** Se valorará la organización, claridad en la estructura y documentación del proyecto.
+- **Uso del repositorio de Git:** Se valorará la organización, claridad en la estructura y documentación del proyecto.
 - **Creatividad:** Se apreciarán outputs adicionales o mejoras en la presentación de los resultados.
 
 ---
